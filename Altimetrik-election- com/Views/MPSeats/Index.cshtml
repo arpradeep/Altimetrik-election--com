@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Altimetrik_election__com.Models.MPSeatsModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_ElectionLayouts.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MpSeatsid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.seats)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MpSeatsid)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.seats)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.MpSeatsid }) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

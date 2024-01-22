@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Altimetrik_election__com.Models.VotersModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_ElectionLayouts.cshtml";
+}
+
+<h1>Voter List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Voterid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.voterAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateName)
+            </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Voterid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.voterAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateName)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>

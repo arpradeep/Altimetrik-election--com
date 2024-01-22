@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Altimetrik_election__com.Models.PartyNameModel>
+
+@{
+    ViewData["Title"] = "Party Name list";
+    Layout = "~/Views/Shared/_ElectionLayouts.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Epartyid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.partyname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yearofelection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Noofwinner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nooflost)
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epartyid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.partyname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.yearofelection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Noofwinner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nooflost)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model Altimetrik_election__com.Models.PartyNameModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_ElectionLayouts.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>PartyNameModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="partyname" class="control-label"></label>
+                <input asp-for="partyname" class="form-control" />
+                <span asp-validation-for="partyname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Symbol" class="control-label"></label>
+                <input asp-for="Symbol" class="form-control" />
+                <span asp-validation-for="Symbol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="yearofelection" class="control-label"></label>
+                <input asp-for="yearofelection" class="form-control" />
+                <span asp-validation-for="yearofelection" class="text-danger"></span>
+            </div>
+          @*   <div class="form-group">
+                <label asp-for="Noofwinner" class="control-label"></label>
+                <input asp-for="Noofwinner" class="form-control" />
+                <span asp-validation-for="Noofwinner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nooflost" class="control-label"></label>
+                <input asp-for="nooflost" class="form-control" />
+                <span asp-validation-for="nooflost" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

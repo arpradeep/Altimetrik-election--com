@@ -1,0 +1,67 @@
+﻿@model Altimetrik_election__com.Models.VotersModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Voter Add</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
+            <div class="form-group">
+                <label asp-for="VoterName" class="control-label"></label>
+                <input asp-for="VoterName" class="form-control" />
+                <span asp-validation-for="VoterName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="voterAddress" class="control-label"></label>
+                <input asp-for="voterAddress" class="form-control" />
+                <span asp-validation-for="voterAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label"></label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityid" class="control-label"></label>
+               
+                <select id="Cityid" name="Cityid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Chennai</option>
+                    <option value="2">Madurai</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="stateid" class="control-label"></label>
+               
+                <select id="Stateid" name="Stateid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Tamil Nadu</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

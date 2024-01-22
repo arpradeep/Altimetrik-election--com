@@ -1,0 +1,53 @@
+﻿@model Altimetrik_election__com.Models.MPSeatsModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_ElectionLayouts.cshtml";
+ }
+
+
+<h1>Create</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StateName" class="control-label">State &nbsp;&nbsp;</label>
+                <select id="Stateid" name="Stateid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Tamil Nadu</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="CityName" class="control-label">City &nbsp;&nbsp;</label>
+                <select id="Cityid" name="Cityid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Chennai</option>
+                    <option value="2">Madurai</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="seats" class="control-label"></label>
+                <input asp-for="seats" class="form-control" /> &nbsp;&nbsp;
+                <span asp-validation-for="seats" class="text-danger"></span>
+                <br/>
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,71 @@
+﻿@model Altimetrik_election__com.Models.VotingsystemModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>VotingsystemModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Votingsystemid" class="control-label"></label>
+                <input asp-for="Votingsystemid" class="form-control" />
+                <span asp-validation-for="Votingsystemid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stateid" class="control-label"> state</label>
+                <select id="Stateid" name="Stateid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Tamil Nadu</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="partyid" class="control-label"> Party name</label>
+                <select id="partyid" name="partyid">
+
+                    <option value="1">BJP</option>
+
+                    <option value="2" selected>Congress</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="voiterid" class="control-label"></label>
+                <input asp-for="voiterid" class="form-control" />
+                <span asp-validation-for="voiterid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="voterdate" class="control-label"></label>
+                <input asp-for="voterdate" class="form-control" />
+                <span asp-validation-for="voterdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityid" class="control-label"></label>
+                <select id="Cityid" name="Cityid">
+
+                    <option value=""></option>
+
+                    <option value="1" selected>Chennai</option>
+                    <option value="2">Madurai</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

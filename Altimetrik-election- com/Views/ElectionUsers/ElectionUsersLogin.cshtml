@@ -1,0 +1,32 @@
+﻿@model Altimetrik_election__com.Models.ElectionUsersModel
+@{
+    ViewData["Title"] = "ElectionUsersLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ElectionUsersLogin</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ElectionUsersLogin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="username" class="control-label"> User Name</label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epassword" class="control-label">Password</label>
+                <input asp-for="Epassword" class="form-control" />
+                <span asp-validation-for="Epassword" class="text-danger"></span>
+            </div><br/>
+            <div class="form-group">
+                <input type="submit" value="submit" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary" asp-area="" asp-controller="ElectionUsers" asp-action="ElectionUsersCreateUser">Create</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <label> @ViewBag.Status</label><br />
+</div>
